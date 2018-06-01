@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guotianpay.guotianchain.dao.GcTransactionDao">
+    <resultMap id="BaseResultMap" type="com.guotianpay.guotianchain.model.GcTransaction">
+        <result column="trade_no" property="tradeNo" />
+        <result column="address" property="address" />
+        <result column="order_no" property="orderNo" />
+        <result column="from_address" property="fromAddress" />
+        <result column="from_user_no" property="fromUserNo" />
+        <result column="from_user_name" property="fromUserName" />
+        <result column="to_address" property="toAddress" />
+        <result column="to_user_no" property="toUserNo" />
+        <result column="to_user_name" property="toUserName" />
+        <result column="amount" property="amount" />
+        <result column="status" property="status" />
+        <result column="time" property="time" />
+        <result column="tx_hash" property="txHash" />
+        <result column="block_num" property="blockNum" />
+        <result column="remarke" property="remarke" />
+    </resultMap>
+
+    <parameterMap id="GcTransaction" type="com.guotianpay.guotianchain.model.GcTransaction"/>
+
+    <sql id="Base_Column_List">
+        trade_no, address, order_no, from_address, from_user_no, from_user_name, to_address, to_user_no, to_user_name, amount, status, time, tx_hash, block_num, remarke
+    </sql>
+
+    <select id="selectByTradeNo" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from gc_transaction
+        where trade_no = #{tradeNo}
+    </select>
+
+    <insert id="insert" parameterType="com.guotianpay.guotianchain.model.GcAccountRecord" >
+        insert into gc_transaction (trade_no,
+        address,
+        order_no,
+        from_address,
+        from_user_no,
+        from_user_name,
+        to_address,
+        to_user_no,
+        to_user_name,
+        amount,
+        status,
+        time,
+        tx_hash,
+        block_num,
+        remarke)
+        values (#{tradeNo,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR},
+        #{orderNo,jdbcType=VARCHAR},
+        #{fromAddress,jdbcType=VARCHAR},
+        #{fromUserNo,jdbcType=VARCHAR},
+        #{fromUserName,jdbcType=VARCHAR},
+        #{toAddress,jdbcType=VARCHAR},
+        #{toUserNo,jdbcType=VARCHAR},
+        #{toUserName,jdbcType=VARCHAR},
+        #{amount,jdbcType=INTEGER},
+        #{status,jdbcType=VARCHAR},
+        #{time,jdbcType=TIMESTAMP},
+        #{txHash,jdbcType=VARCHAR},
+        #{blockNum,jdbcType=INTEGER},
+        #{remarke,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.guotianpay.guotianchain.model.GcTransaction" >
+        update gc_transaction
+        set address = #{address,jdbcType=VARCHAR},
+        order_no = #{orderNo,jdbcType=VARCHAR},
+        from_address = #{fromAddress,jdbcType=VARCHAR},
+        from_user_no = #{fromUserNo,jdbcType=VARCHAR},
+        from_user_name = #{fromUserName,jdbcType=VARCHAR},
+        to_address = #{toAddress,jdbcType=VARCHAR},
+        to_user_no = #{toUserNo,jdbcType=VARCHAR},
+        to_user_name = #{toUserName,jdbcType=VARCHAR},
+        amount = #{amount,jdbcType=INTEGER},
+        status = #{status,jdbcType=VARCHAR},
+        time = #{time,jdbcType=TIMESTAMP},
+        tx_hash = #{txHash,jdbcType=VARCHAR},
+        block_num = #{blockNum,jdbcType=INTEGER},
+        remarke = #{remarke,jdbcType=VARCHAR}
+        where trade_no = #{tradeNo,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+        delete from gc_transaction
+        where trade_no = #{tradeNo,jdbcType=VARCHAR}
+    </delete>
+
+</mapper>

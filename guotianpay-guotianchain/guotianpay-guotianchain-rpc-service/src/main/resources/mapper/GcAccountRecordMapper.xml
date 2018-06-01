@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guotianpay.guotianchain.dao.GcAccountRecordDao">
+    <resultMap id="BaseResultMap" type="com.guotianpay.guotianchain.model.GcAccountRecord">
+        <result column="bill_no" property="billNo" />
+        <result column="user_no" property="userNo" />
+        <result column="address" property="address" />
+        <result column="type_code" property="typeCode" />
+        <result column="create_time" property="createTime" />
+        <result column="amount" property="amount" />
+        <result column="org_amount" property="orgAmount" />
+        <result column="new_amount" property="newAmount" />
+        <result column="tx_trade_no" property="txTradeNo" />
+        <result column="tx_address" property="txAddress" />
+        <result column="tx_remarke" property="txRemarke" />
+    </resultMap>
+
+    <parameterMap id="GcAccountRecord" type="com.guotianpay.guotianchain.model.GcAccountRecord"/>
+
+    <sql id="Base_Column_List">
+        bill_no, user_no, address, type_code, create_time, amount, org_amount, new_amount, tx_trade_no, tx_address, tx_remarke
+    </sql>
+
+    <select id="selectByBillNo" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from gc_account_record
+        where bill_no = #{billNo}
+    </select>
+
+    <insert id="insert" parameterType="com.guotianpay.guotianchain.model.GcAccountRecord" >
+        insert into gc_account_record (bill_no, user_no, address,
+        type_code, create_time, amount,
+        org_amount, new_amount, tx_trade_no,
+        tx_address, tx_remarke)
+        values (#{billNo,jdbcType=VARCHAR}, #{userNo,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR},
+        #{typeCode,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{amount,jdbcType=INTEGER},
+        #{orgAmount,jdbcType=INTEGER},#{newAmount,jdbcType=INTEGER}, #{txTradeNo,jdbcType=VARCHAR},
+        #{txAddress,jdbcType=VARCHAR},#{txRemarke,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.guotianpay.guotianchain.model.GcAccountRecord" >
+        update gc_account_record
+        set user_no = #{userNo,jdbcType=VARCHAR},
+        address = #{address,jdbcType=VARCHAR},
+        type_code = #{typeCode,jdbcType=VARCHAR},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        amount = #{amount,jdbcType=INTEGER},
+        org_amount = #{orgAmount,jdbcType=INTEGER},
+        new_amount = #{newAmount,jdbcType=INTEGER},
+        tx_trade_no = #{txTradeNo,jdbcType=VARCHAR},
+        tx_address = #{txAddress,jdbcType=VARCHAR},
+        tx_remarke = #{txRemarke,jdbcType=VARCHAR}
+        where bill_no = #{billNo,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+        delete from gc_account_record
+        where bill_no = #{billNo,jdbcType=VARCHAR}
+    </delete>
+
+</mapper>

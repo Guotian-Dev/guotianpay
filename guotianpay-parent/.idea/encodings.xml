@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../guotianpay-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-core-blockchain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-finance" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-guotianchain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-guotianchain/guotianpay-guotianchain-rpc-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-trade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-service" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

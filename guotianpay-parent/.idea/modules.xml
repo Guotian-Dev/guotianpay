@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-common/guotianpay-common.iml" filepath="$PROJECT_DIR$/../guotianpay-common/guotianpay-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain.iml" filepath="$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-dao/guotianpay-core-blockchain-dao.iml" filepath="$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-dao/guotianpay-core-blockchain-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-api/guotianpay-core-blockchain-rpc-api.iml" filepath="$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-api/guotianpay-core-blockchain-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-service/guotianpay-core-blockchain-rpc-service.iml" filepath="$PROJECT_DIR$/../guotianpay-core-blockchain/guotianpay-core-blockchain-rpc-service/guotianpay-core-blockchain-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-finance/guotianpay-finance.iml" filepath="$PROJECT_DIR$/../guotianpay-finance/guotianpay-finance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-guotianchain/guotianpay-guotianchain.iml" filepath="$PROJECT_DIR$/../guotianpay-guotianchain/guotianpay-guotianchain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-guotianchain/guotianpay-guotianchain-rpc-service/guotianpay-guotianchain-rpc-service.iml" filepath="$PROJECT_DIR$/../guotianpay-guotianchain/guotianpay-guotianchain-rpc-service/guotianpay-guotianchain-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guotianpay-parent.iml" filepath="$PROJECT_DIR$/guotianpay-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-trade/guotianpay-trade.iml" filepath="$PROJECT_DIR$/../guotianpay-trade/guotianpay-trade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user.iml" filepath="$PROJECT_DIR$/../guotianpay-user/guotianpay-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-dao/guotianpay-user-dao.iml" filepath="$PROJECT_DIR$/../guotianpay-user/guotianpay-user-dao/guotianpay-user-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-api/guotianpay-user-rpc-api.iml" filepath="$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-api/guotianpay-user-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-client/guotianpay-user-rpc-client.iml" filepath="$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-client/guotianpay-user-rpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-service/guotianpay-user-rpc-service.iml" filepath="$PROJECT_DIR$/../guotianpay-user/guotianpay-user-rpc-service/guotianpay-user-rpc-service.iml" />
+    </modules>
+  </component>
+</project>

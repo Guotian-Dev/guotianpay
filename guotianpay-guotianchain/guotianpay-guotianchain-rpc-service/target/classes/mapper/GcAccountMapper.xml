@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guotianpay.guotianchain.dao.GcAccountDao">
+    <resultMap id="BaseResultMap" type="com.guotianpay.guotianchain.model.GcAccount">
+        <result column="user_no" property="userNo" />
+        <result column="address" property="address" />
+        <result column="user_name" property="userName" />
+        <result column="create_time" property="createTime" />
+        <result column="amount" property="amount" />
+        <result column="card_no" property="cardNo" />
+        <result column="card_name" property="cardName" />
+        <result column="company_no" property="companyNo" />
+        <result column="company_name" property="companyName" />
+        <result column="is_card_auth" property="isCardAuth" />
+        <result column="is_company_auth" property="isCompanyAuth" />
+        <result column="role_code" property="roleCode" />
+        <result column="tx_hash" property="txHash" />
+        <result column="block_num" property="blockNum" />
+    </resultMap>
+
+    <parameterMap id="GcAccount" type="com.guotianpay.guotianchain.model.GcAccount"/>
+
+    <sql id="Base_Column_List">
+        user_no, address, user_name, create_time, amount, card_no, card_name, company_no, company_name, is_card_auth, is_company_auth, role_code, tx_hash, block_num
+    </sql>
+
+    <select id="selectByUserNo" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from gc_account
+        where user_no = #{userNo}
+    </select>
+
+    <select id="selectByAddress" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from gc_account
+        where address = #{address}
+    </select>
+
+    <insert id="insert" parameterType="com.guotianpay.guotianchain.model.GcAccount" >
+        insert into gc_account (user_no, address, user_name,
+        create_time, amount, card_no,
+        card_name, company_no, company_name,
+        is_card_auth, is_company_auth, role_code,
+        tx_hash, block_num)
+        values (#{record.userNo,jdbcType=VARCHAR}, #{record.address,jdbcType=VARCHAR}, #{record.userName,jdbcType=VARCHAR},
+        #{record.createTime,jdbcType=TIMESTAMP}, #{record.amount,jdbcType=INTEGER}, #{record.cardNo,jdbcType=VARCHAR},
+        #{record.cardName,jdbcType=VARCHAR}, #{record.companyNo,jdbcType=VARCHAR}, #{record.companyName,jdbcType=VARCHAR},
+        #{record.isCardAuth,jdbcType=INTEGER}, #{record.isCompanyAuth,jdbcType=INTEGER}, #{record.roleCode,jdbcType=VARCHAR},
+        #{record.txHash,jdbcType=VARCHAR}, #{record.blockNum,jdbcType=INTEGER})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.guotianpay.guotianchain.model.GcAccount" >
+        update gc_account
+        set address = #{address,jdbcType=VARCHAR},
+        user_name = #{userName,jdbcType=VARCHAR},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        amount = #{amount,jdbcType=INTEGER},
+        card_no = #{cardNo,jdbcType=VARCHAR},
+        card_name = #{cardName,jdbcType=VARCHAR},
+        company_no = #{companyNo,jdbcType=VARCHAR},
+        company_name = #{companyName,jdbcType=VARCHAR},
+        is_card_auth = #{isCardAuth,jdbcType=INTEGER},
+        is_company_auth = #{isCompanyAuth,jdbcType=INTEGER},
+        role_code = #{roleCode,jdbcType=VARCHAR},
+        tx_hash = #{txHash,jdbcType=VARCHAR},
+        block_num = #{blockNum,jdbcType=INTEGER}
+        where user_no = #{userNo,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+        delete from gc_account
+        where user_no = #{userNo,jdbcType=VARCHAR}
+    </delete>
+
+</mapper>

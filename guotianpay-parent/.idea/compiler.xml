@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="guotianpay-common" />
+        <module name="guotianpay-core-blockchain-dao" />
+        <module name="guotianpay-core-blockchain-rpc-api" />
+        <module name="guotianpay-core-blockchain-rpc-service" />
+        <module name="guotianpay-finance" />
+        <module name="guotianpay-guotianchain-rpc-service" />
+        <module name="guotianpay-trade" />
+        <module name="guotianpay-user-dao" />
+        <module name="guotianpay-user-rpc-api" />
+        <module name="guotianpay-user-rpc-client" />
+        <module name="guotianpay-user-rpc-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="guotianpay-common" target="1.6" />
+      <module name="guotianpay-core-blockchain" target="1.6" />
+      <module name="guotianpay-core-blockchain-dao" target="1.6" />
+      <module name="guotianpay-core-blockchain-rpc-api" target="1.6" />
+      <module name="guotianpay-core-blockchain-rpc-service" target="1.8" />
+      <module name="guotianpay-finance" target="1.6" />
+      <module name="guotianpay-guotianchain" target="1.6" />
+      <module name="guotianpay-guotianchain-rpc-service" target="1.8" />
+      <module name="guotianpay-parent" target="1.6" />
+      <module name="guotianpay-trade" target="1.6" />
+      <module name="guotianpay-user" target="1.6" />
+      <module name="guotianpay-user-dao" target="1.6" />
+      <module name="guotianpay-user-rpc-api" target="1.6" />
+      <module name="guotianpay-user-rpc-client" target="1.6" />
+      <module name="guotianpay-user-rpc-service" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,48 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth",
+      "type": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.coin-base-address",
+      "description": "矿工账户地址",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.gas-limit",
+      "description": "最大GAS值",
+      "type": "java.math.BigInteger"
+    },
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.gas-price",
+      "description": "每GAS的ETH以太币价格",
+      "type": "java.math.BigInteger"
+    },
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.gpc-address",
+      "description": "GPayCoin合约地址",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.gpc-owner-address",
+      "description": "GPayCoin合约Owner账户地址",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.guotianpay.core.blockchain.rpc.config.MyGethConfig",
+      "name": "mygeth.gpc-owner-passphrase",
+      "description": "GPayCoin合约Owner账户密码",
+      "type": "java.lang.String"
+    }
+  ]
+}
